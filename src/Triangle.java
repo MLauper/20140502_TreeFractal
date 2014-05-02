@@ -20,13 +20,17 @@ public class Triangle extends JComponent {
 
             int[] x = new int[3];
             int[] y = new int[3];
-            int n;
 
-            x[0]=((Double)x0).intValue(); x[1]=((Double)x0).intValue()+((Double)width).intValue(); x[2]=((Double)x0).intValue()+((Double)width).intValue()/2;
-            y[0]=((Double)y0).intValue(); y[1]=((Double)y0).intValue(); y[2]=((Double)y0).intValue()+((Double)width).intValue();
-            n = 3;
+            x[0]=((Double)x0).intValue();
+            y[0]=((Double)y0).intValue();
 
-            Polygon p = new Polygon(x, y, n);
+            x[1]=((Double)x0).intValue()+((Double)width).intValue();
+            y[1]=((Double)y0).intValue();
+
+            x[2]=((Double)x0).intValue()+((Double)width).intValue()/2;
+            y[2]=((Double)y0).intValue()+((Double)width).intValue();
+
+           Polygon p = new Polygon(x, y, 3);
 
             g2.fillPolygon(p);
 
